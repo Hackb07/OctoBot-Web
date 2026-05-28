@@ -1,0 +1,504 @@
+:root {
+  color: #1b2430;
+  background: #f4f6f8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.topbar {
+  align-items: center;
+  background: rgba(246, 248, 250, 0.94);
+  border-bottom: 1px solid #dbe2ea;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 14px clamp(18px, 4vw, 56px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wordmark,
+.repoLink,
+.actions a,
+.scriptRow,
+.owner,
+.terminalHeader {
+  align-items: center;
+  display: flex;
+}
+
+.wordmark {
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.wordmark img {
+  height: 38px;
+  width: 38px;
+}
+
+.navlinks {
+  display: flex;
+  gap: clamp(12px, 3vw, 28px);
+  justify-content: center;
+}
+
+.navlinks a {
+  color: #4d5c68;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.repoLink {
+  background: #1b2430;
+  border-radius: 8px;
+  color: #ffffff;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 14px;
+  white-space: nowrap;
+}
+
+.repoLink.light {
+  background: #ffffff;
+  color: #1b2430;
+}
+
+.hero {
+  align-items: center;
+  background:
+    linear-gradient(120deg, rgba(239, 244, 246, 0.9), rgba(251, 252, 253, 0.8)),
+    url("../src-tauri/icons/icon.png") right 8vw center / min(38vw, 430px) no-repeat;
+  display: grid;
+  gap: clamp(28px, 6vw, 72px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+  min-height: calc(100vh - 72px);
+  padding: clamp(34px, 7vw, 88px) clamp(18px, 6vw, 82px) clamp(42px, 7vw, 90px);
+}
+
+.heroText {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  color: #111827;
+  font-size: clamp(42px, 6vw, 72px);
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin-bottom: 22px;
+  max-width: 880px;
+}
+
+h2 {
+  color: #111827;
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+h3 {
+  color: #14202b;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.lede,
+.sectionIntro p:not(.eyebrow),
+.featureGrid p,
+.docCard p,
+.scriptRow p,
+.owner p,
+footer {
+  color: #53616e;
+  line-height: 1.65;
+}
+
+.lede {
+  font-size: clamp(18px, 2vw, 22px);
+  max-width: 720px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.actions a {
+  border-radius: 8px;
+  font-weight: 800;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 18px;
+}
+
+.primaryAction {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.secondaryAction {
+  background: #ffffff;
+  border: 1px solid #cfd9e3;
+  color: #1b2430;
+}
+
+.terminalPreview {
+  background: #101820;
+  border: 1px solid #2d3946;
+  border-radius: 8px;
+  box-shadow: 0 28px 70px rgba(27, 36, 48, 0.22);
+  color: #d7e1ea;
+  overflow: hidden;
+  width: 100%;
+}
+
+.terminalHeader {
+  background: #182434;
+  border-bottom: 1px solid #2d3946;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+}
+
+.terminalHeader span {
+  background: #f87171;
+  border-radius: 999px;
+  height: 10px;
+  width: 10px;
+}
+
+.terminalHeader span:nth-child(2) {
+  background: #facc15;
+}
+
+.terminalHeader span:nth-child(3) {
+  background: #34d399;
+}
+
+.terminalHeader strong {
+  color: #b6c4cf;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.terminalBody {
+  display: grid;
+  gap: 12px;
+  min-height: 360px;
+  padding: 24px;
+}
+
+.terminalBody p,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  margin: 0;
+}
+
+.terminalBody b {
+  color: #2dd4bf;
+}
+
+.terminalBody .ok {
+  color: #a7f3d0;
+}
+
+.terminalBody .muted {
+  color: #93a4b3;
+}
+
+.petBand {
+  align-items: center;
+  background: #ffffff;
+  border-top: 1px solid #dbe2ea;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 28px clamp(18px, 6vw, 82px);
+}
+
+.petBand h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  margin: 0;
+}
+
+.octopusPet {
+  background: #101820;
+  color: #a7f3d0;
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1.12;
+  min-width: 170px;
+  padding: 18px 22px;
+  text-align: center;
+}
+
+.metricBand {
+  background: #1b2430;
+  color: #ffffff;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.metricBand div {
+  background: #202c39;
+  display: grid;
+  gap: 6px;
+  padding: 26px clamp(18px, 5vw, 56px);
+}
+
+.metricBand strong {
+  font-size: 32px;
+}
+
+.metricBand span {
+  color: #b8c5d0;
+}
+
+.section {
+  padding: clamp(56px, 8vw, 96px) clamp(18px, 6vw, 82px);
+}
+
+.sectionIntro {
+  max-width: 760px;
+}
+
+.docGrid,
+.featureGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+.docCard,
+.featureGrid article {
+  background: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: 8px;
+  min-height: 210px;
+  padding: 22px;
+}
+
+.docCard svg,
+.featureGrid svg,
+.scriptRow svg,
+.owner svg {
+  color: #0f766e;
+  flex: 0 0 auto;
+}
+
+.split {
+  align-items: start;
+  background: #eaf0f3;
+  display: grid;
+  gap: clamp(24px, 5vw, 70px);
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
+}
+
+.codeStack {
+  display: grid;
+  gap: 14px;
+}
+
+pre {
+  background: #101820;
+  border-radius: 8px;
+  color: #d7fbe8;
+  overflow: auto;
+  padding: 18px;
+  white-space: pre-wrap;
+}
+
+.scriptList {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.scriptRow {
+  background: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: 8px;
+  gap: 18px;
+  padding: 18px;
+}
+
+.scriptRow p {
+  margin-bottom: 10px;
+}
+
+code {
+  background: #e8eef2;
+  border: 1px solid #d2dde6;
+  border-radius: 6px;
+  color: #263443;
+  display: inline-block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 5px 7px;
+}
+
+.architecture {
+  background: #f9fafb;
+}
+
+.featureGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.commandSection {
+  background: #ffffff;
+}
+
+.commandGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 26px;
+}
+
+.commandGrid code {
+  min-height: 54px;
+  padding: 16px;
+}
+
+.owner {
+  background: #0f766e;
+  color: #ffffff;
+  gap: 24px;
+  justify-content: space-between;
+  padding: clamp(36px, 7vw, 70px) clamp(18px, 6vw, 82px);
+}
+
+.owner .eyebrow,
+.owner p,
+.owner svg {
+  color: #d5fff8;
+}
+
+.owner h2 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+footer {
+  align-items: center;
+  background: #111827;
+  color: #c8d2dc;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 20px clamp(18px, 6vw, 82px);
+}
+
+footer code {
+  background: #202c39;
+  border-color: #334253;
+  color: #e5edf4;
+}
+
+@media (max-width: 1040px) {
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    background:
+      linear-gradient(120deg, rgba(239, 244, 246, 0.96), rgba(251, 252, 253, 0.9)),
+      url("../src-tauri/icons/icon.png") right 24px top 30px / 180px no-repeat;
+  }
+
+  .docGrid,
+  .featureGrid,
+  .commandGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar,
+  footer,
+  .owner,
+  .petBand {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navlinks {
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 42px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .terminalBody {
+    min-height: 300px;
+    padding: 18px;
+  }
+
+  .metricBand,
+  .docGrid,
+  .featureGrid,
+  .commandGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scriptRow {
+    align-items: flex-start;
+  }
+}

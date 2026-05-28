@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "OctoBot",
+  "version": "0.1.0",
+  "identifier": "dev.octobot.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://127.0.0.1:5173",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "OctoBot",
+        "width": 1280,
+        "height": 820
+      }
+    ]
+  }
+}
